@@ -1,0 +1,39 @@
+<div class="row">
+  <div [class]="primeiraColuna"></div>
+  <div class="col-md-4">
+    
+    <div class="jumbotron">
+      <form (submit)="onSubmit()">
+          <h1>Login</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="txtUsuario">Usuário</label>
+              <input type="text" class="form-control" id="txtUsuario" placeholder="Digite o usuário" name="Usuario" 
+              [(ngModel)]="dataSource.Usuario"/>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="txtSenha">Senha</label>
+              <input type="password" class="form-control" id="txtSenha" placeholder="Senha" name="Senha" [(ngModel)]="dataSource.Senha"/>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-primary float-right">Autenticar</button>
+          </div>
+        </div>
+        <div class="row" *ngIf="authError">
+            <div class="col-md-12">
+              <div class="alert alert-danger" role="alert">
+                Erro na autenticação
+              </div>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-4"></div>
+</div> 

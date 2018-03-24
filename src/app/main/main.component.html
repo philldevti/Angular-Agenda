@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <form class="form-inline">
+    <a class="form-brand">Agenda</a>
+    <input class="form-control mr-sm-2" type="search" (keyup)="onSearch(search.value)" #search placeholder="Pesquisa"
+    aria-label="Search">
+    <button class="btn btn-outine-info my-2 my-sm-0" type="button" (click)="logout()">Sair</button>
+  </form>
+  </nav>
+  <div class="row">
+    <div class="col-md-4">
+
+      <app-lista [new]="newItem" [searchCriteria]="searchCriteria" (onSelect)="onSelect_Click($event)"></app-lista>      
+    
+    </div>
+    <div class="col-md-8">
+
+        <app-form [data]="itemSelected" (onSaveItem)="onSaveItem_Click($event)"></app-form>
+       
+      </div>
+  </div>

@@ -1,0 +1,151 @@
+<form (submit)="onSubmit()">
+    <div class="row">
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-primary float-right">Salvar</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <fieldset>
+                <legend>Contato</legend>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="txtNome">Nome</label>
+                            <input type="text" class="form-control form-control-sm" id="txtNome" name="Nome" [(ngModel)]="dataSource.Nome">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtCEP">CEP</label>
+                            <input type="text" class="form-control form-control-sm" id="txtCEP" name="cep" [(ngModel)]="dataSource.Endereco.cep" (blur)="searchCEP()">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="txtLocalidade">Cidade</label>
+                            <input type="text" class="form-control form-control-sm" disabled id="txtLocalidade" name="localidade" [(ngModel)]="dataSource.Endereco.localidade">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="txtEstado">UF</label>
+                            <input type="text" class="form-control form-control-sm" disabled id="txtUF" name="uf" [(ngModel)]="dataSource.Endereco.uf">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="txtLogradouro">Logradouro</label>
+                            <input type="text" class="form-control form-control-sm" disabled id="txtLogradouro" name="logradouro" [(ngModel)]="dataSource.Endereco.logradouro">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtNumero">Número</label>
+                            <input type="text" class="form-control form-control-sm" id="txtNumero" name="Numero" [(ngModel)]="dataSource.Numero">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label for="txtBairro">Bairro</label>
+                            <input type="text" class="form-control form-control-sm" disabled id="txtBairro" name="bairro" [(ngModel)]="dataSource.Endereco.bairro">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="txtComplemento">Complemento</label>
+                            <input type="text" class="form-control form-control-sm" id="txtComplemento" name="complemento" [(ngModel)]="dataSource.Endereco.complemento">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <fieldset>
+                        <legend>E-mail</legend>
+                        <div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <input type="email" class="form-control form-control-sm" #txtEmail placeholder="Digite o e-mail">
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-outline-success btn-sm" (click)="addEmail(txtEmail.value)">Ok</button>
+                                </div>
+                            </div>
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>E-mail</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let dataItem of dataSource.Email">
+                                        <td>{{ dataItem }}</td>
+                                        <td>
+                                            <button type="button" class="close" (click)="apagarEmail(dataItem)" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <fieldset>
+                        <legend>Telefone</legend>
+                        <div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <input type="phone" class="form-control form-control-sm" #txtTelefone placeholder="Digite o telefone">
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-outline-success btn-sm" (click)="addTelefone(txtTelefone.value)">Ok</button>
+                                </div>
+                            </div>
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Telefone</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let dataItem of dataSource.Telefone">
+                                        <td>{{ dataItem }}</td>
+                                        <td>
+                                            <button type="button" class="close" (click)="apagarTelefone(dataItem)" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
