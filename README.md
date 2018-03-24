@@ -1,9 +1,9 @@
 # Treinamento Consinco - Angular Básico
 
-Tela de Login: 
-![alt text][logo]
+<p align="center">
+  <img src="https://image.prntscr.com/image/GqVYk1IVSFmIVYzgUD3DNQ.png" alt="Login">
+</p>
 
-[logo]: https://image.prntscr.com/image/GqVYk1IVSFmIVYzgUD3DNQ.png "Login"
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
