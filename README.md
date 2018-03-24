@@ -1,17 +1,26 @@
 # Treinamento Consinco - Angular Básico
 
+### Tela de Login
 <p align="center">
   <img src="https://image.prntscr.com/image/GqVYk1IVSFmIVYzgUD3DNQ.png" alt="Login">
 </p>
 
 <hr />
 
+### Tela Principal
 <p align="center">
   <img src="https://image.prntscr.com/image/y4Oy5VlRSIS26dkNNFXB3g.png" alt="Tela Principal">
 </p>
 
 
-
+# Projeto
+ 
+ - Contém tela de Login
+ - Contém filtro de busca por nome de pessoa
+ - Cadastro de endereço, e-mails e telefones de pessoa
+ - Utiliza serviço de consulta de cep
+ 
+ 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 ## Development server
