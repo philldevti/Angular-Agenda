@@ -1,6 +1,10 @@
 # Treinamento Consinco - Angular Básico
 
-https://image.prntscr.com/image/GqVYk1IVSFmIVYzgUD3DNQ.png "Login"
+Tela de Login: 
+![alt text][logo]
+
+[logo]: https://image.prntscr.com/image/GqVYk1IVSFmIVYzgUD3DNQ.png "Login"
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
