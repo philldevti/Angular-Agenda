@@ -4,6 +4,12 @@
   <img src="https://image.prntscr.com/image/GqVYk1IVSFmIVYzgUD3DNQ.png" alt="Login">
 </p>
 
+<hr />
+
+<p align="center">
+  <img src="https://image.prntscr.com/image/y4Oy5VlRSIS26dkNNFXB3g.png" alt="Tela Principal">
+</p>
+
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
